@@ -20,7 +20,20 @@ console.log(counter.getCount());
 // - addMessage method that adds a message to the array
 // - getMessage(index) method that returns the message at index index
 
-const createMessageHolder = () => {};
+const createMessageHolder = () => {
+  const messages = []
+
+  // Define method that adds a message to the array
+  const addMessage = (newMessage) => {
+    messages.push(newMessage)
+  }
+
+  // Method that returns the message at index index
+  const getMessage = (i) => messages[i]
+
+  //Return the private array and the two methods
+  return {messages, addMessage, getMessage}
+};
 
 // Test
 const messageHolder = createMessageHolder();
