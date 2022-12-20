@@ -28,7 +28,7 @@ const createMessageHolder = () => {
     messages.push(newMessage)
   }
 
-  // Method that returns the message at index index
+  // Method that returns the message at index
   const getMessage = (i) => messages[i]
 
   //Return the private array and the two methods
@@ -68,8 +68,14 @@ console.log(addThree(41));
 // This will return a function a function greet
 // - This accepts a single argument, name (i.e. "Matt")
 // - This function should return the greeting combined with the name, (i.e. "Hello Matt")
-const createGreeting = function(greeting) {};
+const createGreeting = function(greeting) {
 
+  //Function that takes a name input and outputs a string.
+  const greet = (name) => `${greeting}, ${name}`
+
+  //Return the function
+  return greet
+};
 // Test
 const welcomeGreet = createGreeting('Welcome');
 console.log(welcomeGreet('Alice'));
